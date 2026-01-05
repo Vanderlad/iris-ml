@@ -1,4 +1,5 @@
 from load_data import load_iris_data
+from visualize import plot_petal_length_vs_width
 
 def main():
     X, y, feature_names, target_names = load_iris_data()
@@ -11,6 +12,11 @@ def main():
     print("=== CLASS COUNTS ===")
     for i in range(3):
         print(target_names[i], ":", counts[i])
+
+    save_path = "results/figures/petal_length_vs_width.png"
+    plot_petal_length_vs_width(X, y, save_path)
+
+    print("Saved plot to:", save_path)
 
 if __name__ == "__main__":
     main()
