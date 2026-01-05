@@ -14,5 +14,5 @@ pip install -r requirements.txt
 ## TODO
 
 - [x] Load Iris Dataset
-- [x] Visualize of petal + sepal (length and width)
+- [x] Visualize petal + sepal (length and width)
 - [ ] Create knn.py and replace the rules test with real classifier (k-Nearest Neighbour)
