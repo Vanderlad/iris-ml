@@ -12,9 +12,27 @@ def plot_petal_length_vs_width(X, y, save_path):
     plt.scatter(x[y == 1], w[y == 1], label="versicolor")
     plt.scatter(x[y == 2], w[y == 2], label="virginica")
     plt.legend()
-    
+
     plt.xlabel("Petal length (cm)")
     plt.ylabel("Petal width (cm)")
+    plt.title("Iris: Petal length vs Petal width (colored by species)")
+
+    plt.savefig(save_path)
+    plt.close()
+
+
+def plot_sepal_length_vs_width(X, y, save_path):
+    x = X[:, 0] #sepal length
+    w = X[:, 1] #sepal width
+
+
+    plt.scatter(x[y == 0], w[y == 0], label="setosa")
+    plt.scatter(x[y == 1], w[y == 1], label="versicolor")
+    plt.scatter(x[y == 2], w[y == 2], label="virginica")
+    plt.legend()
+
+    plt.xlabel("Sepal length (cm)")
+    plt.ylabel("Sepal width (cm)")
     plt.title("Iris: Petal length vs Petal width (colored by species)")
 
     plt.savefig(save_path)
